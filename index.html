@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduShield</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f5f7fb;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: #1e2a78;
+    color: white;
+}
+header a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 50px;
+    background: linear-gradient(135deg, #1e2a78, #3b49df);
+    color: white;
+}
+.hero-text {
+    max-width: 50%;
+}
+.hero img {
+    width: 400px;
+}
+
+/* BUTTONS */
+button {
+    padding: 12px 25px;
+    margin: 10px 10px 0 0;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+.primary { background: #00bfa6; color: white; }
+.secondary { background: white; color: #1e2a78; }
+
+/* SECTION */
+.section {
+    padding: 60px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.card-content {
+    padding: 15px;
+}
+
+/* INSTRUCTOR */
+.instructor img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+/* FOOTER */
+footer {
+    background: #1e2a78;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        max-width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+<h2>🛡️ EduShield</h2>
+<div>
+<a href="courses.html">Courses</a>
+<a href="login.html">Login</a>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-text">
+<h1>Learn Securely. Pay Safely. Grow Faster.</h1>
+<p>Secure online learning platform with protected content and safe payments.</p>
+<button class="primary">Browse Courses</button>
+<button class="secondary">Login</button>
+</div>
+
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="learning">
+</section>
+
+<!-- COURSES -->
+<section class="section">
+<h2>Featured Courses</h2>
+
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b">
+<div class="card-content">
+<h3>Cyber Security</h3>
+<p>₹999 ⭐ 4.5</p>
+</div>
+</div>
+
+<div class="card">
+<img src="ehack.jpg">
+<div class="card-content">
+<h3>Ethical Hacking</h3>
+<p>₹1499 ⭐ 4.7</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<div class="card-content">
+<h3>Web Security</h3>
+<p>₹1199 ⭐ 4.6</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- INSTRUCTORS -->
+<section class="section">
+<h2>Instructor Spotlight</h2>
+
+<div class="grid">
+<div class="card instructor" style="text-align:center;padding:20px;">
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<h3>John Doe</h3>
+<p>Cyber Security Expert</p>
+</div>
+
+<div class="card instructor" style="text-align:center;padding:20px;">
+<img src="mohit.jpg">
+<h3>Mohit Nagrecha
+</h3>
+<p>Ethical Hacker</p>
+</div>
+</div>
+</section>
+
+<!-- REGISTER SECTION -->
+<section class="section" style="background:#eef2ff;">
+
+<h2 style="text-align:center;">Create Your Account 🔐</h2>
+
+<div style="display:flex;justify-content:center;margin-top:30px;">
+
+    <div style="width:350px;background:white;padding:30px;border-radius:12px;
+                box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+
+        <form action="register.php" method="POST">
+
+            <input type="text" name="name" placeholder="Full Name" required
+                style="width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc;">
+
+            <input type="email" name="email" placeholder="Email Address" required
+                style="width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc;">
+
+            <input type="password" name="password" placeholder="Password" required
+                style="width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc;">
+
+            <button type="submit"
+                style="width:100%;padding:12px;background:#1e2a78;color:white;
+                       border:none;border-radius:8px;font-size:16px;">
+                Register
+            </button>
+
+        </form>
+
+        <p style="text-align:center;margin-top:10px;">
+            Already have an account? 
+            <a href="login.html" style="color:#1e2a78;">Login</a>
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 EduShield | Secure Learning Platform</p>
+</footer>
+
+</body>
+</html>
